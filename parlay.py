@@ -15,14 +15,14 @@ def main():
     wager_input = input("Enter wager amount in USD: ")
     try:
         wager_input = float(wager_input)
-    except TypeError:
+    except ValueError:
         print("You must enter a valid amount in USD. Program exiting.")
         return -1
 
     num_legs_input = input("Enter number of legs in the parlay: ")
     try:
         num_legs_input = int(num_legs_input)
-    except TypeError:
+    except ValueError:
         print("You must enter a positive whole number. Program exiting.")
         return -2
 
@@ -37,7 +37,7 @@ def main():
         temp_ml_odd = input(f"Enter leg {i+1} odds: ")
         try:
             temp_ml_odd = int(temp_ml_odd)
-        except TypeError:
+        except ValueError:
             print("You must enter a valid odds value. Program exiting.")
             return -4
 
